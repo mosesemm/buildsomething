@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link href="app.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+        <div class="app_container">
+
+        <div class="heading">
+            <h2 style="display: inline;">To do app</h2><span style="font-size: 14px;"> - Vanila javascript</span>
+        </div>
+
+        <div class="left">
+            <hr/>
+            <form>
+                <div>
+                    <p id="errorFeedback" style="display: none;"></p>
+                </div>
+                <div class="controlGroups">
+                    <label>Task: </label><input class="inputTextDefault" type="text" id="todoTxt"/> <button type="submit" id="addBtn" class="buttonDefault">Add</button>
+                </div>
+                <div  class="controlGroups">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 80%; text-align: left;">Task</th>
+                                <th style="width: 20%;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="outputTblBody">
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </form>
+            <div id="editOrView" style="display: none;">
+                <hr/>
+
+                <div>
+                    <h5>Edit or View task</h5>
+                </div>
+                <div>
+                    <p id="errorFeedbackView" style="display: none;"></p>
+                </div>
+                <form>
+                    <div class="controlGroups">
+                        <label>Task: </label><input class="inputTextDefault" id="taskEdit"/> 
+                    </div>
+                    <div class="controlGroups">
+                        <label>Done: 
+                            <input type="checkbox" id="doneEdit"/>
+                        </label>
+                    </div>
+                    <div class="controlGroups">
+                        <button type="submit" class="buttonDefault" id="updateBtn">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+        </div>
+    </body>
+</html>
