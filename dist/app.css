@@ -1,0 +1,48 @@
+.app_container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+    color: blue;
+    margin: 10px;
+}
+.buttonDefault {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.inputTextDefault {
+    padding: 5px;
+    font-size: 16px;
+}
+.controlGroups {
+    margin: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+#errorFeedback, #errorFeedbackView {
+    color: red;
+    padding: 5px;
+}
+
+table td a{
+    margin: 0 5px 0 5px;
+}
