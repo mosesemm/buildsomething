@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'ShadowsIntoLight';
+    src: url('../fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'ShadowsIntoLight';
+}
+
 .app_container {
     padding: 10px;
     display: flex;
@@ -6,8 +16,18 @@
 }
 
 .heading {
+    min-height: 20vh;
     color: blue;
     margin: 10px;
+    background-image: url('../images/nice_car.png');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading .title {
+    background-color: white;
+    padding: 5px;
+    display: inline;
 }
 .buttonDefault {
     border: none;

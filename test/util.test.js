@@ -1,5 +1,5 @@
 import {isNotEmpty, desializeData, serializeData
-} from "../src/utils";
+} from "../src/lib/utils";
 
 
 test("isNotEmpty returns true when called with values", () => {

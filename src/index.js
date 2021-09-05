@@ -1,5 +1,6 @@
 import {isNotEmpty, 
-    serializeData, desializeData} from "./utils";
+    serializeData, desializeData} from "./lib/utils";
+import './css/app.css';
 
 
  function IndexVM() {
