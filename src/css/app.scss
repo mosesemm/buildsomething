@@ -1,0 +1,26 @@
+
+@use "@material/button/styles" as button-style;
+@use "@material/elevation/mdc-elevation";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/top-app-bar/mdc-top-app-bar";
+
+@use "@material/checkbox"; // Required only for data table with row selection.
+@use "@material/icon-button"; // Required only for data table with column sorting.
+@use "@material/data-table/data-table";
+
+@use "@material/dialog";
+
+//@include icon-button.core-styles;
+
+@include checkbox.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
+@include dialog.core-styles;
+
+body {
+    margin: 0;
+}
+
+.mdc-data-table {
+    width: 100%;
+}

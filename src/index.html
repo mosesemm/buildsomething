@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="bundle.css" />
+    </head>
+    <body>
+        <div id="app" >
+            <header class="mdc-top-app-bar">
+                <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <span class="mdc-top-app-bar__title">Todo app series</span>
+                    </section>
+                </div>
+            </header>
+
+            <main class="mdc-top-app-bar--fixed-adjust">
+                <div class="mdc-layout-grid">
+
+                    <div class="mdc-elevation--z1" style="padding: 20px;">
+                        <div>
+                            <h2>Todo App - Knockout js and material styling</h2>
+                        </div>
+
+    
+                        <div data-bind="with: todoListingVm">
+                            <button class="mdc-button mdc-button--raised" data-bind="click: addTodo">
+                                <span class="mdc-button__ripple"></span>
+                                <i class="material-icons mdc-button__icon" aria-hidden="true">add_task</i>
+                                <span class="mdc-button__label">Add</span>
+                            </button>
+                            <div style="margin-top: 5px">
+
+                                <!-- TODO: Could be nicer with components/templates like something-->
+                                <div class="mdc-data-table">
+                                    <div class="mdc-data-table__table-container">
+                                        <table class="mdc-data-table__table">
+                                            <thead>
+                                                <tr class="mdc-data-table__header-row">
+                                                    <th class="mdc-data-table__header-cell"> Description</th>
+                                                    <th class="mdc-data-table__header-cell"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="mdc-data-table__content" data-bind="foreach: todoItems">
+                                                <tr data-bind="css: {'mdc-data-table__row mdc-data-table__row--selected': done, 'mdc-data-table__row': !done} ">
+                                                    <td data-bind="text: description"></td>
+                                                    <td >
+                                                        <button class="mdc-button mdc-button--outlined" data-bind="click: $parent.addTodo">
+                                                            <span class="mdc-button__ripple"></span>
+                                                            <i class="material-icons mdc-button__icon" aria-hidden="true">delete</i>
+                                                            <span class="mdc-button__label">Delete</span>
+                                                        </button>
+
+                                                        <button class="mdc-button mdc-button--outlined" data-bind="click: $parent.addTodo">
+                                                            <span class="mdc-button__ripple"></span>
+                                                            <i class="material-icons mdc-button__icon" aria-hidden="true">view_headline</i>
+                                                            <span class="mdc-button__label">View</span>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Same applies to this-->
+                                <div class="mdc-dialog">
+                                    <div class="mdc-dialog__container">
+                                      <div class="mdc-dialog__surface"
+                                        role="alertdialog"
+                                        aria-modal="true"
+                                        aria-labelledby="my-dialog-title"
+                                        aria-describedby="my-dialog-content">
+                                        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                                        <h2 class="mdc-dialog__title" id="my-dialog-title">
+                                            Add or Edit Item
+                                        </h2>
+                                        <div class="mdc-dialog__content" id="my-dialog-content">
+
+                                            
+                                        </div>
+                                        <div class="mdc-dialog__actions">
+                                          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                                            <div class="mdc-button__ripple"></div>
+                                            <span class="mdc-button__label">Cancel</span>
+                                          </button>
+                                          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
+                                            <div class="mdc-button__ripple"></div>
+                                            <span class="mdc-button__label">Save</span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="mdc-dialog__scrim"></div>
+                                  </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
